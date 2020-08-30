@@ -60,3 +60,32 @@ body {
 #titulo {
     color: black;
 }
+
+.modal-dialog {
+    color: dimgrey;
+    padding: 50px;
+}
+
+.card {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 13%;
+    border-radius: 30px;
+}
+
+.logo {
+    margin: 20px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 500px;
+}
+
+@media screen and (max-width: 870px) {
+    .container {
+        display: none;
+    }
+}
