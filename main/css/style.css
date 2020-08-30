@@ -1,3 +1,13 @@
 body {
     background-color: gainsboro;
 }
+
+#tarjetas {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#tarjetas .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
