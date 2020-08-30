@@ -33,6 +33,11 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 nav ul li:hover {
-    background: #3ead47;
+    background: #00334e;
 }

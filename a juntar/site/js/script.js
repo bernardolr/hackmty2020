@@ -1,14 +1,17 @@
 var container = document.querySelector(".container");
 var seats = document.querySelectorAll(".row .seat:not(.occupied)"); //A node list of all the seats not occupied in the main area (the .row parameter stops it from getting the seats in the display above)
 
+let contador = 0
 
 const count = document.getElementById("count");
 const total = document.getElementById("total");
-const movieSelector = document.getElementById("movie");
+const movieSelect = document.getElementById("movie");
+
+localStorage.clear();
 
 populateUI();
 
-let ticketPrice = +movieSelector.value; //turning the string value into an int
+let ticketPrice = +movieSelect.value; //turning the string value into an int
 
 //Save selected movie index and price
 function setMovieData(movieIndex, moviePrice) {
@@ -55,12 +58,12 @@ function populateUI() {
 
     if (selectedMovieIndex !== null) {
         movieSelect.selectedIndex == selectedMovieIndex;
-
+        contador--;
     }
 }
 
 // Movie select event
-movieSelector.addEventListener('change', e => {
+movieSelect.addEventListener('change', e => {
     ticketPrice = +e.target.value;
     setMovieData(e.target.selectedIndex, e.target.value);
 
@@ -69,14 +72,26 @@ movieSelector.addEventListener('change', e => {
 
 // Seat click event
 
+asientos = Array.from(document.querySelectorAll(".seat")).length
+
 container.addEventListener('click', e => {
+    let valor = document.querySelector("#restriccion").value;
+    console.log(asientos)
     if (
         e.target.classList.contains('seat') &&
-        !e.target.classList.contains('occupied')
+        !e.target.classList.contains('occupied') &&
+        contador < ((asientos - 3) * (valor / 100)) - 1
     ) {
-        e.target.classList.toggle('selected')
-
+        e.target.classList.toggle('selected');
+        contador++;
         updateSelectedCount();
+    } else {
+        //document.getElementsByClassName("movie-container").disabled = true;
+        var nodes = document.getElementById("cont").getElementsByTagName('*');
+        for (var i = 0; i < nodes.length; i++) {
+            nodes[i].disabled = true;
+        }
+        console.log("No se puede agregar mas")
     }
 });
 

@@ -1,3 +1,12 @@
+html,
+body {
+    background: url("/resources/fondo.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 form {
     width: 450px;
     margin: auto;
@@ -47,20 +56,4 @@ textarea {
     form {
         width: 100%;
     }
-}
-
-html,
-body {
-    background: url("/resources/fondo.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-
-/* Centrar y poner fondo a contacto */
-
-.cont-pri {
-    margin-top: 20%;
 }

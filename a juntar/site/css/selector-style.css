@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+.regresar {
+    margin: auto;
+}
+
+#btn {
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #858585;
+    background-color: #1883ba;
+    border-radius: 6px;
+}
+
 body {
     background-color: #000;
     color: white;
@@ -39,8 +53,8 @@ body {
 
 .seat {
     background: #008000;
-    height: 12px;
-    width: 15px;
+    height: 36px;
+    width: 45px;
     margin: 3px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
