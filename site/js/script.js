@@ -1,5 +1,5 @@
 var container = document.querySelector(".container");
-var seats = document.querySelectorAll(".row .seat:not(.occupied)"); //A node list of all the seats not occupied in the main area (the .row parameter stops it from getting the seats in the display above)
+var seats = document.querySelectorAll(".row .seat:not(.occupied)"); //Selecciona todas los asientos no ocupados mediante la clase
 
 let contador = 0
 
@@ -40,7 +40,7 @@ function updateSelectedCount() {
 }
 
 
-//Get data from localstorage and populate UI
+//Obtiene la informacion del localstorage 
 function populateUI() {
     const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
 
@@ -48,7 +48,6 @@ function populateUI() {
         seats.forEach((seat, index) => {
             if (selectedSeats.indexOf(index) > -1) {
                 seat.classList.add('selected');
-
             }
 
         });
