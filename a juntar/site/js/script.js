@@ -80,7 +80,7 @@ container.addEventListener('click', e => {
     if (
         e.target.classList.contains('seat') &&
         !e.target.classList.contains('occupied') &&
-        contador < ((asientos - 3) * (valor / 100)) - 1
+        contador < ((asientos - 4) * (valor / 100)) - 1
     ) {
         e.target.classList.toggle('selected');
         contador++;
