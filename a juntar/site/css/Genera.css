@@ -1,0 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#izquierda {
+    height: 300px;
+    weight: 50%;
+    background: red;
+}
